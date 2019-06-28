@@ -1,15 +1,15 @@
-.container {
+#container {
   margin: auto;
   width: 100%;
-  background-color: black;
+  background-color: white;
 }
 
-.wrapper-1 {
+#wrapper-1 {
   display: flex;
   align-content: flex-end;
   justify-content: space-around;
   flex-wrap: wrap;
-  color: white;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   height: 50vh;
@@ -17,7 +17,7 @@
   margin: 0 5%;
 }
 
-.wrapper-2 {
+#wrapper-2 {
   display: flex;
   align-content: flex-start;
   justify-content: space-between;
@@ -28,6 +28,7 @@
   height: 50vh;
   width: 90%;
   margin: 0 5%;
+  opacity: 0;
 }
 
 span {
@@ -35,11 +36,12 @@ span {
   margin: 0 -0.5%;
 }
 
-hr {
+#separation-bar {
   color: white;
   flex: 100%;
   max-width: 30%;
   margin: 5% 0;
+  opacity: 0;
 }
 
 .links {
@@ -50,5 +52,5 @@ hr {
 }
 
 .character-5 {
-  color: rgb(200, 0, 0);
+  color: limegreen;
 }
