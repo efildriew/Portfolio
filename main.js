@@ -7,28 +7,32 @@ function fadeIn(character) {
   //     characterOpacity += characterOpacity * 0.1;
   //   }, 200);
   // }
-  // setTimeout(() => {
-  character.style.transition = "opacity 10s";
-  character.style.opacity = 1;
-  // }, 2000);
+  var interval = setInterval(() => {
+    var background = document.getElementById("container");
+
+    if (background.style.background === "black") {
+      clearInterval(interval);
+    }
+
+    character.style.transition = "opacity 10s";
+    character.style.opacity = 1;
+  }, 1000);
 }
 
 function randomCharacter() {
-  // setTimeout(() => {
   var characters = document.getElementsByTagName("span");
   var charactersArray = [...characters];
 
   for (let i = 0; i < characters.length; i++) {
     let randomNumber = Math.floor(Math.random() * charactersArray.length);
 
-    fadeIn(charactersArray[randomNumber]);
+    setTimeout(fadeIn(charactersArray[randomNumber]), 1000);
 
     charactersArray.splice(randomNumber, 1);
   }
   if (charactersArray.length === 0) {
     startMain();
   }
-  // }, 2000);
 }
 
 function startMain() {
@@ -42,7 +46,7 @@ function startMain() {
     divLinks.style.opacity = 1;
     background.style.backgroundColor = "black";
     charactersName.style.color = "white";
-  }, 5000);
+  }, 6000);
 }
 
 window.onload = function() {
